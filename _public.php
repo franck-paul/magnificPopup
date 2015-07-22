@@ -40,7 +40,17 @@ class magnificPopupPublic
 		'<script type="text/javascript">'."\n".
 		"//<![CDATA[\n".
 		'$(document).ready(function() {'."\n".
-			'$("div.post-content").magnificPopup({delegate: \'a[href$=".jpg"],a[href$=".jpeg"],a[href$=".png"],a[href$=".gif"],a[href$=".JPG"],a[href$=".JPEG"],a[href$=".PNG"],a[href$=".GIF"]\', type: \'image\', gallery: {enabled: true}});'."\n".
+			'$("div.post-content").magnificPopup({'."\n".
+				'delegate: \'a[href$=".jpg"],a[href$=".jpeg"],a[href$=".png"],a[href$=".gif"],a[href$=".JPG"],a[href$=".JPEG"],a[href$=".PNG"],a[href$=".GIF"]\', '."\n".
+				'type: \'image\', '."\n".
+				'tClose: \''.__('Close (esc)').'\', '."\n".
+				'gallery: {'."\n".
+					'enabled: true,'."\n".
+					'tPrev: \''.__('Previous (Left arrow key)').'\', '."\n".
+					'tNext: \''.__('Next (Right arrow key)').'\', '."\n".
+					'tCounter: \'<span class="mfp-counter">'.__('%curr% of %total%').'</span>\', '."\n".
+				'}'."\n".
+			'});'."\n".
 		"});\n".
 		"\n//]]>\n".
 		"</script>\n";
