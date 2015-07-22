@@ -23,4 +23,4 @@ msgid "magnific-popup"
 msgstr ""
 
 msgid "Enable magnific-popup"
-msgstr "Actvier magnific-popup"
+msgstr "Activer magnific-popup"

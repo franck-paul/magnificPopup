@@ -40,7 +40,7 @@ class magnificPopupPublic
 		'<script type="text/javascript">'."\n".
 		"//<![CDATA[\n".
 		'$(document).ready(function() {'."\n".
-			'$("div.post-content").magnificPopup({delegate: \'a\', type: \'image\', gallery: {enabled: true}});'."\n".
+			'$("div.post-content").magnificPopup({delegate: \'a[href$=".jpg"],a[href$=".jpeg"],a[href$=".png"],a[href$=".gif"],a[href$=".JPG"],a[href$=".JPEG"],a[href$=".PNG"],a[href$=".GIF"]\', type: \'image\', gallery: {enabled: true}});'."\n".
 		"});\n".
 		"\n//]]>\n".
 		"</script>\n";
