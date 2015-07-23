@@ -41,7 +41,7 @@ class magnificPopupPublic
 		"//<![CDATA[\n".
 		'$(document).ready(function() {'."\n".
 			'$("div.post-content").magnificPopup({'."\n".
-				'delegate: \'a[href$=".jpg"],a[href$=".jpeg"],a[href$=".png"],a[href$=".gif"],a[href$=".JPG"],a[href$=".JPEG"],a[href$=".PNG"],a[href$=".GIF"]\', '."\n".
+				'delegate: \'a[href$=".jpg"],a[href$=".jpeg"],a[href$=".png"],a[href$=".gif"],a[href$=".webp"],a[href$=".JPG"],a[href$=".JPEG"],a[href$=".PNG"],a[href$=".GIF"],a[href$=".WEBP"]\', '."\n".
 				'type: \'image\', '."\n".
 				'tClose: \''.__('Close (esc)').'\', '."\n".
 				'gallery: {'."\n".
