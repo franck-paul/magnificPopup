@@ -15,8 +15,9 @@ $this->registerModule(
 	/* Name */			"magnific-popup",
 	/* Description*/		"lightBox like effect on images using jquery responsive modal",
 	/* Author */			"Franck Paul and contributors",
-	/* Version */			'0.3',
+	/* Version */			'0.4',
 	array(
+		/* Dependencies */	'requires' =>		array(array('core','2.9')),
 		/* Permissions */	'permissions' =>	'admin',
 		/* Type */			'type' =>			'plugin'
 	)

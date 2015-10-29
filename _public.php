@@ -23,10 +23,9 @@ class magnificPopupPublic
 			return;
 		}
 
-		$url = $core->blog->getQmarkURL().'pf='.basename(dirname(__FILE__));
 		echo
-		'<link rel="stylesheet" type="text/css" href="'.$url.'/css/magnific-popup.css" />'."\n".
-		'<script type="text/javascript" src="'.$url.'/js/magnific-popup.js"></script>'."\n";
+		dcUtils::cssLoad($core->blog->getPF('magnific-popup/css/magnific-popup.css')).
+		dcUtils::jsLoad($core->blog->getPF('magnific-popup/js/magnific-popup.js'));
 	}
 
 	public static function publicFooterContent($core)
