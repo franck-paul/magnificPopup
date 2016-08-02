@@ -39,7 +39,7 @@ class magnificPopupPublic
 		'<script type="text/javascript">'."\n".
 		"//<![CDATA[\n".
 		'$(document).ready(function() {'."\n".
-			'$("div.post-content").magnificPopup({'."\n".
+			'$("div.post-content,div.post-excerpt").magnificPopup({'."\n".
 				'delegate: \'a[href$=".jpg"],a[href$=".jpeg"],a[href$=".png"],a[href$=".gif"],a[href$=".webp"],a[href$=".JPG"],a[href$=".JPEG"],a[href$=".PNG"],a[href$=".GIF"],a[href$=".WEBP"]\', '."\n".
 				'type: \'image\', '."\n".
 				'tClose: \''.__('Close (esc)').'\', '."\n".
