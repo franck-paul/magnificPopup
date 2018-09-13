@@ -18,9 +18,9 @@ $this->registerModule(
     "lightBox like effect on images using jquery responsive modal", // Description
     "Franck Paul and contributors",                                 // Author
     '0.4',                                                          // Version
-    array(
-        'requires'    => array(array('core', '2.9')), // Dependencies
-        'permissions' => 'admin',                     // Permissions
-        'type'        => 'plugin'                    // Type
-    )
+    [
+        'requires'    => [['core', '2.9']], // Dependencies
+        'permissions' => 'admin',           // Permissions
+        'type'        => 'plugin'          // Type
+    ]
 );

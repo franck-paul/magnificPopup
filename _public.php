@@ -13,8 +13,8 @@
 
 if (!defined('DC_RC_PATH')) {return;}
 
-$core->addBehavior('publicHeadContent', array('magnificPopupPublic', 'publicHeadContent'));
-$core->addBehavior('publicFooterContent', array('magnificPopupPublic', 'publicFooterContent'));
+$core->addBehavior('publicHeadContent', ['magnificPopupPublic', 'publicHeadContent']);
+$core->addBehavior('publicFooterContent', ['magnificPopupPublic', 'publicFooterContent']);
 
 class magnificPopupPublic
 {
