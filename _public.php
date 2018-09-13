@@ -37,21 +37,34 @@ class magnificPopupPublic
             return;
         }
 
-        echo
-        '<script type="text/javascript">' . "\n" .
-        '$(document).ready(function() {' . "\n" .
-        '$("div.post-content,div.post-excerpt").magnificPopup({' . "\n" .
-        'delegate: \'a[href$=".jpg"],a[href$=".jpeg"],a[href$=".png"],a[href$=".gif"],a[href$=".webp"],a[href$=".JPG"],a[href$=".JPEG"],a[href$=".PNG"],a[href$=".GIF"],a[href$=".WEBP"]\', ' . "\n" .
-        'type: \'image\', ' . "\n" .
-        'tClose: \'' . __('Close (esc)') . '\', ' . "\n" .
-        'gallery: {' . "\n" .
-        'enabled: true,' . "\n" .
-        'tPrev: \'' . __('Previous (Left arrow key)') . '\', ' . "\n" .
-        'tNext: \'' . __('Next (Right arrow key)') . '\', ' . "\n" .
-        'tCounter: \'<span class="mfp-counter">' . __('%curr% of %total%') . '</span>\', ' . "\n" .
-            '}' . "\n" .
-            '});' . "\n" .
-            "});\n" .
-            "</script>\n";
+        $strEscape   = __('Close (esc)');
+        $strPrevious = __('Previous (Left arrow key)');
+        $strNext     = __('Next (Right arrow key)');
+        $strCounter  = __('%curr% of %total%');
+        $strImages   = implode(',', array_map(
+            function ($value) {
+                return 'a[href$=".' . $value . '"],a[href$=".' . strtoupper($value) . '"]';
+            },
+            ['jpg', 'jpeg', 'png', 'gif', 'wepb', 'svg']));
+
+        $str = <<<EOT
+<script type="text/javascript">
+$(document).ready(function() {
+    $("div.post-content,div.post-excerpt").magnificPopup({
+        delegate: '$strImages',
+        type: 'image',
+        tClose: '$strEscape',
+        gallery: {
+            enabled: true,
+            tPrev: '$strPrevious',
+            tNext: '$strNext',
+            tCounter: '<span class="mfp-counter">$strCounter</span>',
+        }
+    });
+});
+</script>
+EOT;
+
+        echo $str;
     }
 }
