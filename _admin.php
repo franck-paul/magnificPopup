@@ -25,7 +25,7 @@ class magnificPopupBehaviors
     {
         $settings->addNameSpace('magnificpopup');
         echo
-        '<div class="fieldset"><h4>magnific-popup</h4>' .
+        '<div class="fieldset"><h4 id="magnific-popup">magnific-popup</h4>' .
         '<p><label class="classic">' .
         form::checkbox('magnific_popup_enabled', '1', $settings->magnificpopup->enabled) .
         __('Enable magnific-popup') . '</label></p>' .
