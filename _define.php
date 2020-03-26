@@ -19,11 +19,11 @@ $this->registerModule(
     "Franck Paul and contributors",                                 // Author
     '0.4',                                                          // Version
     [
-        'requires'    => [['core', '2.16']],                              // Dependencies
-        'permissions' => 'admin',                                         // Permissions
-        'type'        => 'plugin',                                        // Type
-        'details'     => 'https://open-time.net/?q=magnific-popup',       // Details URL
-        'support'     => 'https://github.com/franck-paul/magnific-popup', // Support URL
+        'requires'    => [['core', '2.16']],                             // Dependencies
+        'permissions' => 'admin',                                        // Permissions
+        'type'        => 'plugin',                                       // Type
+        'details'     => 'https://open-time.net/?q=magnific-popup',      // Details URL
+        'support'     => 'https://github.com/franck-paul/magnificPopup', // Support URL
         'settings'    => [
             'blog' => '#params.magnific-popup'
         ]
