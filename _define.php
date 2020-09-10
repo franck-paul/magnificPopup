@@ -17,9 +17,9 @@ $this->registerModule(
     "magnific-popup",                                               // Name
     "lightBox like effect on images using jquery responsive modal", // Description
     "Franck Paul and contributors",                                 // Author
-    '0.4',                                                          // Version
+    '0.5',                                                          // Version
     [
-        'requires'    => [['core', '2.16']],                             // Dependencies
+        'requires'    => [['core', '2.17']],                             // Dependencies
         'permissions' => 'admin',                                        // Permissions
         'type'        => 'plugin',                                       // Type
         'details'     => 'https://open-time.net/?q=magnific-popup',      // Details URL

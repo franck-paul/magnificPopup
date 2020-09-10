@@ -1,10 +1,10 @@
-/*global $, getData */
+/*global $, dotclear */
 'use strict';
 
 // Ready, set, go \o/
 $(document).ready(function() {
 
-    const options =getData('magnific_popup');
+    const options = dotclear.getData('magnific_popup');
 
     $("div.post-content,div.post-excerpt").magnificPopup({
         delegate: options.images,
