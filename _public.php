@@ -10,8 +10,9 @@
  * @copyright Franck Paul carnet.franck.paul@gmail.com
  * @copyright GPL-2.0 https://www.gnu.org/licenses/gpl-2.0.html
  */
-
-if (!defined('DC_RC_PATH')) {return;}
+if (!defined('DC_RC_PATH')) {
+    return;
+}
 
 $core->addBehavior('publicHeadContent', ['magnificPopupPublic', 'publicHeadContent']);
 
@@ -36,7 +37,7 @@ class magnificPopupPublic
                 function ($value) {
                     return 'a[href$=".' . $value . '"],a[href$=".' . strtoupper($value) . '"]';
                 },
-                ['jpg', 'jpeg', 'png', 'gif', 'wepb', 'svg']))
+                ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'avif']))
         ]) .
         dcUtils::jsLoad($core->blog->getPF('magnific-popup/js/public.js'));
     }
