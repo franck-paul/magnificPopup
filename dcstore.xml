@@ -1,0 +1,12 @@
+<modules xmlns:da="http://dotaddict.org/da/">
+  <module id="magnific-popup">
+    <name>magnific-popup</name>
+    <version>0.6</version>
+    <author>Franck Paul and contributors</author>
+    <desc>lightBox like effect on images using jquery responsive modal</desc>
+    <file>https://github.com/franck-paul/magnific-popup/releases/download/0.6/plugin-magnific-popup.zip</file>
+    <da:dcmin>2.17</da:dcmin>
+    <da:details>https://open-time.net/?q=magnific-popup</da:details>
+    <da:support>https://github.com/franck-paul/magnific-popup</da:support>
+  </module>
+</modules>
