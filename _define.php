@@ -23,10 +23,12 @@ $this->registerModule(
         'requires'    => [['core', '2.17']],                             // Dependencies
         'permissions' => 'admin',                                        // Permissions
         'type'        => 'plugin',                                       // Type
-        'details'     => 'https://open-time.net/?q=magnific-popup',      // Details URL
-        'support'     => 'https://github.com/franck-paul/magnificPopup', // Support URL
         'settings'    => [
             'blog' => '#params.magnific-popup'
-        ]
+        ],
+
+        'details'    => 'https://open-time.net/?q=magnific-popup',       // Details URL
+        'support'    => 'https://github.com/franck-paul/magnific-popup', // Support URL
+        'repository' => 'https://raw.githubusercontent.com/franck-paul/magnific-popup/main/dcstore.xml'
     ]
 );
