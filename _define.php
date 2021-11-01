@@ -29,6 +29,6 @@ $this->registerModule(
 
         'details'    => 'https://open-time.net/?q=magnific-popup',       // Details URL
         'support'    => 'https://github.com/franck-paul/magnific-popup', // Support URL
-        'repository' => 'https://raw.githubusercontent.com/franck-paul/magnific-popup/main/dcstore.xml'
+        'repository' => 'https://raw.githubusercontent.com/franck-paul/magnific-popup/master/dcstore.xml'
     ]
 );
