@@ -2,7 +2,7 @@
 'use strict';
 
 // Ready, set, go \o/
-$(document).ready(function () {
+$(() => {
   const options = dotclear.getData('magnific_popup');
 
   $('div.post-content,div.post-excerpt').magnificPopup({

@@ -14,31 +14,30 @@ if (!defined('DC_RC_PATH')) {
     return;
 }
 
-$core->addBehavior('publicHeadContent', ['magnificPopupPublic', 'publicHeadContent']);
+dcCore::app()->addBehavior('publicHeadContent', ['magnificPopupPublic', 'publicHeadContent']);
 
 class magnificPopupPublic
 {
-    public static function publicHeadContent($core)
+    public static function publicHeadContent($core = null)
     {
-        $core->blog->settings->addNameSpace('magnificpopup');
-        if (!$core->blog->settings->magnificpopup->enabled) {
+        dcCore::app()->blog->settings->addNameSpace('magnificpopup');
+        if (!dcCore::app()->blog->settings->magnificpopup->enabled) {
             return;
         }
 
         echo
-        dcUtils::cssLoad($core->blog->getPF('magnific-popup/css/magnific-popup.css')) .
-        dcUtils::jsLoad($core->blog->getPF('magnific-popup/js/magnific-popup.js')) .
+        dcUtils::cssModuleLoad('magnific-popup/css/magnific-popup.css') .
+        dcUtils::jsModuleLoad('magnific-popup/js/magnific-popup.js') .
         dcUtils::jsJson('magnific_popup', [
-            'escape'   => __('Close (esc)'),
-            'previous' => __('Previous (Left arrow key)'),
-            'next'     => __('Next (Right arrow key)'),
-            'counter'  => __('%curr% of %total%'),
-            'images'   => implode(',', array_map(
-                function ($value) {
-                    return 'a[href$=".' . $value . '"],a[href$=".' . strtoupper($value) . '"]';
-                },
-                ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'avif']))
+            'escape'        => __('Close (esc)'),
+            'previous'      => __('Previous (Left arrow key)'),
+            'next'          => __('Next (Right arrow key)'),
+            'counter'       => __('%curr% of %total%'),
+            'images'        => implode(',', array_map(
+                fn ($value) => 'a[href$=".' . $value . '"],a[href$=".' . strtoupper($value) . '"]',
+                ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'avif']
+            )),
         ]) .
-        dcUtils::jsLoad($core->blog->getPF('magnific-popup/js/public.js'));
+        dcUtils::jsModuleLoad('magnific-popup/js/public.js');
     }
 }

@@ -19,7 +19,7 @@
   z-index: 1043;
   position: fixed;
   outline: none !important;
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .mfp-container {
   text-align: center;
@@ -48,30 +48,29 @@
   text-align: left;
   z-index: 1045;
 }
-.mfp-inline-holder .mfp-content, .mfp-ajax-holder .mfp-content {
+.mfp-inline-holder .mfp-content,
+.mfp-ajax-holder .mfp-content {
   width: 100%;
   cursor: auto;
 }
 .mfp-ajax-cur {
   cursor: progress;
 }
-.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
-  cursor: -moz-zoom-out;
-  cursor: -webkit-zoom-out;
+.mfp-zoom-out-cur,
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
   cursor: zoom-out;
 }
 .mfp-zoom {
   cursor: pointer;
-  cursor: -webkit-zoom-in;
-  cursor: -moz-zoom-in;
   cursor: zoom-in;
 }
 .mfp-auto-cursor .mfp-content {
   cursor: auto;
 }
-.mfp-close, .mfp-arrow, .mfp-preloader, .mfp-counter {
-  -webkit-user-select: none;
-  -moz-user-select: none;
+.mfp-close,
+.mfp-arrow,
+.mfp-preloader,
+.mfp-counter {
   user-select: none;
 }
 .mfp-loading.mfp-figure {
@@ -81,7 +80,7 @@
   display: none !important;
 }
 .mfp-preloader {
-  color: #CCC;
+  color: #ccc;
   position: absolute;
   top: 50%;
   width: auto;
@@ -92,10 +91,10 @@
   z-index: 1044;
 }
 .mfp-preloader a {
-  color: #CCC;
+  color: #ccc;
 }
 .mfp-preloader a:hover {
-  color: #FFF;
+  color: #fff;
 }
 .mfp-s-ready .mfp-preloader {
   display: none;
@@ -103,7 +102,8 @@
 .mfp-s-error .mfp-content {
   display: none;
 }
-button.mfp-close, button.mfp-arrow {
+button.mfp-close,
+button.mfp-arrow {
   overflow: visible;
   cursor: pointer;
   background: transparent;
@@ -131,12 +131,13 @@ button::-moz-focus-inner {
   text-align: center;
   opacity: 0.65;
   padding: 0 0 18px 10px;
-  color: #FFF;
+  color: #fff;
   font-style: normal;
   font-size: 28px;
   font-family: Arial, Baskerville, monospace;
 }
-.mfp-close:hover, .mfp-close:focus {
+.mfp-close:hover,
+.mfp-close:focus {
   opacity: 1;
 }
 .mfp-close:active {
@@ -145,8 +146,9 @@ button::-moz-focus-inner {
 .mfp-close-btn-in .mfp-close {
   color: #333;
 }
-.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
-  color: #FFF;
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
+  color: #fff;
   right: -6px;
   text-align: right;
   padding-right: 6px;
@@ -156,7 +158,7 @@ button::-moz-focus-inner {
   position: absolute;
   top: 0;
   right: 0;
-  color: #CCC;
+  color: #ccc;
   font-size: 12px;
   line-height: 18px;
   white-space: nowrap;
@@ -175,10 +177,12 @@ button::-moz-focus-inner {
 .mfp-arrow:active {
   margin-top: -54px;
 }
-.mfp-arrow:hover, .mfp-arrow:focus {
+.mfp-arrow:hover,
+.mfp-arrow:focus {
   opacity: 1;
 }
-.mfp-arrow:before, .mfp-arrow:after {
+.mfp-arrow:before,
+.mfp-arrow:after {
   content: '';
   display: block;
   width: 0;
@@ -204,22 +208,22 @@ button::-moz-focus-inner {
   left: 0;
 }
 .mfp-arrow-left:after {
-  border-right: 17px solid #FFF;
+  border-right: 17px solid #fff;
   margin-left: 31px;
 }
 .mfp-arrow-left:before {
   margin-left: 25px;
-  border-right: 27px solid #3F3F3F;
+  border-right: 27px solid #3f3f3f;
 }
 .mfp-arrow-right {
   right: 0;
 }
 .mfp-arrow-right:after {
-  border-left: 17px solid #FFF;
+  border-left: 17px solid #fff;
   margin-left: 39px;
 }
 .mfp-arrow-right:before {
-  border-left: 27px solid #3F3F3F;
+  border-left: 27px solid #3f3f3f;
 }
 .mfp-iframe-holder {
   padding-top: 40px;
@@ -281,7 +285,7 @@ img.mfp-img {
   background: #444;
 }
 .mfp-figure small {
-  color: #BDBDBD;
+  color: #bdbdbd;
   display: block;
   font-size: 12px;
   line-height: 14px;
@@ -300,7 +304,7 @@ img.mfp-img {
 .mfp-title {
   text-align: left;
   line-height: 18px;
-  color: #F3F3F3;
+  color: #f3f3f3;
   word-wrap: break-word;
   padding-right: 36px;
 }
@@ -311,9 +315,9 @@ img.mfp-img {
   cursor: pointer;
 }
 @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
-  /**
-       * Remove all paddings around the image on small screen
-       */
+  /*
+   * Remove all paddings around the image on small screen
+   */
   .mfp-img-mobile .mfp-image-holder {
     padding-left: 0;
     padding-right: 0;
@@ -359,15 +363,12 @@ img.mfp-img {
 }
 @media all and (max-width: 900px) {
   .mfp-arrow {
-    -webkit-transform: scale(0.75);
     transform: scale(0.75);
   }
   .mfp-arrow-left {
-    -webkit-transform-origin: 0;
     transform-origin: 0;
   }
   .mfp-arrow-right {
-    -webkit-transform-origin: 100%;
     transform-origin: 100%;
   }
   .mfp-container {

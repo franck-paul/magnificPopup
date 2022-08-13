@@ -18,17 +18,17 @@ $this->registerModule(
     'magnific-popup',                                               // Name
     'lightBox like effect on images using jquery responsive modal', // Description
     'Franck Paul and contributors',                                 // Author
-    '0.6',                                                          // Version
+    '0.7',
     [
-        'requires'    => [['core', '2.17']],                             // Dependencies
+        'requires'    => [['core', '2.23']],                             // Dependencies
         'permissions' => 'admin',                                        // Permissions
         'type'        => 'plugin',                                       // Type
         'settings'    => [
-            'blog' => '#params.magnific-popup'
+            'blog' => '#params.magnific-popup',
         ],
 
         'details'    => 'https://open-time.net/?q=magnific-popup',       // Details URL
         'support'    => 'https://github.com/franck-paul/magnific-popup', // Support URL
-        'repository' => 'https://raw.githubusercontent.com/franck-paul/magnific-popup/master/dcstore.xml'
+        'repository' => 'https://raw.githubusercontent.com/franck-paul/magnific-popup/master/dcstore.xml',
     ]
 );
