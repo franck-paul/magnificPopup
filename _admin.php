@@ -22,7 +22,7 @@ dcCore::app()->addBehavior('adminBeforeBlogSettingsUpdate', ['magnificPopupBehav
 
 class magnificPopupBehaviors
 {
-    public static function adminBlogPreferencesForm($core = null, $settings)
+    public static function adminBlogPreferencesForm($core, $settings)
     {
         $settings->addNameSpace('magnificpopup');
         echo
