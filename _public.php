@@ -14,11 +14,9 @@ if (!defined('DC_RC_PATH')) {
     return;
 }
 
-dcCore::app()->addBehavior('publicHeadContent', ['magnificPopupPublic', 'publicHeadContent']);
-
 class magnificPopupPublic
 {
-    public static function publicHeadContent($core = null)
+    public static function publicHeadContent()
     {
         dcCore::app()->blog->settings->addNameSpace('magnificpopup');
         if (!dcCore::app()->blog->settings->magnificpopup->enabled) {
@@ -29,11 +27,11 @@ class magnificPopupPublic
         dcUtils::cssModuleLoad('magnific-popup/css/magnific-popup.css') .
         dcUtils::jsModuleLoad('magnific-popup/js/magnific-popup.js') .
         dcUtils::jsJson('magnific_popup', [
-            'escape'        => __('Close (esc)'),
-            'previous'      => __('Previous (Left arrow key)'),
-            'next'          => __('Next (Right arrow key)'),
-            'counter'       => __('%curr% of %total%'),
-            'images'        => implode(',', array_map(
+            'escape'   => __('Close (esc)'),
+            'previous' => __('Previous (Left arrow key)'),
+            'next'     => __('Next (Right arrow key)'),
+            'counter'  => __('%curr% of %total%'),
+            'images'   => implode(',', array_map(
                 fn ($value) => 'a[href$=".' . $value . '"],a[href$=".' . strtoupper($value) . '"]',
                 ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'avif']
             )),
@@ -41,3 +39,5 @@ class magnificPopupPublic
         dcUtils::jsModuleLoad('magnific-popup/js/public.js');
     }
 }
+
+dcCore::app()->addBehavior('publicHeadContent', [magnificPopupPublic::class, 'publicHeadContent']);

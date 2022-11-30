@@ -15,20 +15,22 @@ if (!defined('DC_RC_PATH')) {
 }
 
 $this->registerModule(
-    'magnific-popup',                                               // Name
-    'lightBox like effect on images using jquery responsive modal', // Description
-    'Franck Paul and contributors',                                 // Author
-    '0.7.1',
+    'magnific-popup',
+    'lightBox like effect on images using jquery responsive modal',
+    'Franck Paul and contributors',
+    '1.0',
     [
-        'requires'    => [['core', '2.23']],                             // Dependencies
-        'permissions' => 'admin',                                        // Permissions
-        'type'        => 'plugin',                                       // Type
-        'settings'    => [
+        'requires'    => [['core', '2.24']],
+        'permissions' => dcCore::app()->auth->makePermissions([
+            dcAuth::PERMISSION_ADMIN,
+        ]),
+        'type'     => 'plugin',
+        'settings' => [
             'blog' => '#params.magnific-popup',
         ],
 
-        'details'    => 'https://open-time.net/?q=magnific-popup',       // Details URL
-        'support'    => 'https://github.com/franck-paul/magnific-popup', // Support URL
+        'details'    => 'https://open-time.net/?q=magnific-popup',
+        'support'    => 'https://github.com/franck-paul/magnific-popup',
         'repository' => 'https://raw.githubusercontent.com/franck-paul/magnific-popup/master/dcstore.xml',
     ]
 );

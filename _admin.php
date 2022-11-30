@@ -17,12 +17,9 @@ if (!defined('DC_CONTEXT_ADMIN')) {
 // dead but useful code, in order to have translations
 __('magnific-popup') . __('lightBox like effect on images using jquery responsive modal');
 
-dcCore::app()->addBehavior('adminBlogPreferencesForm', ['magnificPopupBehaviors', 'adminBlogPreferencesForm']);
-dcCore::app()->addBehavior('adminBeforeBlogSettingsUpdate', ['magnificPopupBehaviors', 'adminBeforeBlogSettingsUpdate']);
-
 class magnificPopupBehaviors
 {
-    public static function adminBlogPreferencesForm($core, $settings)
+    public static function adminBlogPreferencesForm($settings)
     {
         $settings->addNameSpace('magnificpopup');
         echo
@@ -39,3 +36,6 @@ class magnificPopupBehaviors
         $settings->magnificpopup->put('enabled', !empty($_POST['magnific_popup_enabled']), 'boolean');
     }
 }
+
+dcCore::app()->addBehavior('adminBlogPreferencesFormV2', [magnificPopupBehaviors::class, 'adminBlogPreferencesForm']);
+dcCore::app()->addBehavior('adminBeforeBlogSettingsUpdate', [magnificPopupBehaviors::class, 'adminBeforeBlogSettingsUpdate']);
