@@ -27,6 +27,7 @@ class magnificPopupPublic
         dcUtils::cssModuleLoad('magnific-popup/css/magnific-popup.css') .
         dcUtils::jsModuleLoad('magnific-popup/js/magnific-popup.js') .
         dcUtils::jsJson('magnific_popup', [
+            'animate'  => (bool) dcCore::app()->blog->settings->magnificpopup->animate,
             'escape'   => __('Close (esc)'),
             'previous' => __('Previous (Left arrow key)'),
             'next'     => __('Next (Right arrow key)'),

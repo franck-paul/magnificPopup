@@ -27,13 +27,16 @@ class magnificPopupBehaviors
         '<p><label class="classic">' .
         form::checkbox('magnific_popup_enabled', '1', $settings->magnificpopup->enabled) .
         __('Enable magnific-popup') . '</label></p>' .
-            '</div>';
+        form::checkbox('magnific_popup_animate', '1', $settings->magnificpopup->animate) .
+        __('Enable animation') . '</label></p>' .
+        '</div>';
     }
 
     public static function adminBeforeBlogSettingsUpdate($settings)
     {
         $settings->addNameSpace('magnificpopup');
         $settings->magnificpopup->put('enabled', !empty($_POST['magnific_popup_enabled']), 'boolean');
+        $settings->magnificpopup->put('animate', !empty($_POST['magnific_popup_animate']), 'boolean');
     }
 }
 

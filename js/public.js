@@ -5,7 +5,7 @@
 $(() => {
   const options = dotclear.getData('magnific_popup');
 
-  $('div.post-content,div.post-excerpt').magnificPopup({
+  const settings = {
     delegate: options.images,
     type: 'image',
     tClose: options.escape,
@@ -15,5 +15,10 @@ $(() => {
       tNext: options.next,
       tCounter: `<span class="mfp-counter">${options.counter}</span>`,
     },
-  });
+  };
+  if (options.animate) {
+    settings.removalDelay = 300;
+    settings.mainClass = 'mfp-fade';
+  }
+  $('div.post-content,div.post-excerpt').magnificPopup(settings);
 });

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dotclear 2 magnific-popup module\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-22 16:03+0200\n"
+"POT-Creation-Date: 2022-12-01 14:37+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,30 +16,34 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../hg-plugins/magnific-popup//_admin.php:15
+#: ../git-plugins/magnific-popup/_admin.php:18
 msgid "lightBox like effect on images using jquery responsive modal"
 msgstr ""
 
-#: ../hg-plugins/magnific-popup//_admin.php:15
+#: ../git-plugins/magnific-popup/_admin.php:18
 msgid "magnific-popup"
 msgstr ""
 
-#: ../hg-plugins/magnific-popup//_admin.php:29
+#: ../git-plugins/magnific-popup/_admin.php:29
 msgid "Enable magnific-popup"
 msgstr ""
 
-#: ../hg-plugins/magnific-popup//_public.php:46
+#: ../git-plugins/magnific-popup/_admin.php:31
+msgid "Enable animation"
+msgstr ""
+
+#: ../git-plugins/magnific-popup/_public.php:31
 msgid "Close (esc)"
 msgstr ""
 
-#: ../hg-plugins/magnific-popup//_public.php:49
+#: ../git-plugins/magnific-popup/_public.php:32
 msgid "Previous (Left arrow key)"
 msgstr ""
 
-#: ../hg-plugins/magnific-popup//_public.php:50
+#: ../git-plugins/magnific-popup/_public.php:33
 msgid "Next (Right arrow key)"
 msgstr ""
 
-#: ../hg-plugins/magnific-popup//_public.php:51
+#: ../git-plugins/magnific-popup/_public.php:34
 msgid "%curr% of %total%"
 msgstr ""
