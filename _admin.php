@@ -21,7 +21,6 @@ class magnificPopupBehaviors
 {
     public static function adminBlogPreferencesForm($settings)
     {
-        $settings->addNameSpace('magnificpopup');
         echo
         '<div class="fieldset"><h4 id="magnific-popup">magnific-popup</h4>' .
         '<p><label class="classic">' .
@@ -34,11 +33,12 @@ class magnificPopupBehaviors
 
     public static function adminBeforeBlogSettingsUpdate($settings)
     {
-        $settings->addNameSpace('magnificpopup');
         $settings->magnificpopup->put('enabled', !empty($_POST['magnific_popup_enabled']), 'boolean');
         $settings->magnificpopup->put('animate', !empty($_POST['magnific_popup_animate']), 'boolean');
     }
 }
 
-dcCore::app()->addBehavior('adminBlogPreferencesFormV2', [magnificPopupBehaviors::class, 'adminBlogPreferencesForm']);
-dcCore::app()->addBehavior('adminBeforeBlogSettingsUpdate', [magnificPopupBehaviors::class, 'adminBeforeBlogSettingsUpdate']);
+dcCore::app()->addBehaviors([
+    'adminBlogPreferencesFormV2'    => [magnificPopupBehaviors::class, 'adminBlogPreferencesForm'],
+    'adminBeforeBlogSettingsUpdate' => [magnificPopupBehaviors::class, 'adminBeforeBlogSettingsUpdate'],
+]);

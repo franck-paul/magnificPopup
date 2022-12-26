@@ -18,7 +18,6 @@ class magnificPopupPublic
 {
     public static function publicHeadContent()
     {
-        dcCore::app()->blog->settings->addNameSpace('magnificpopup');
         if (!dcCore::app()->blog->settings->magnificpopup->enabled) {
             return;
         }
