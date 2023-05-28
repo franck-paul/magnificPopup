@@ -17,25 +17,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "lightBox like effect on images using jquery responsive modal"
-msgstr "Effets lightbox-like responsive sur les images"
+msgstr ""
 
 msgid "magnificPopup"
 msgstr ""
 
 msgid "Enable magnificPopup"
-msgstr "Activer magnificPopup"
+msgstr ""
 
 msgid "Enable animation"
-msgstr "Activer les animations"
+msgstr ""
 
 msgid "Close (esc)"
-msgstr "Fermer (esc)"
+msgstr ""
 
 msgid "Previous (Left arrow key)"
-msgstr "Précédent (flèche gauche)"
+msgstr ""
 
 msgid "Next (Right arrow key)"
-msgstr "Suivant (flèche droite)"
+msgstr ""
 
 msgid "%curr% of %total%"
-msgstr "%curr% sur %total%"
+msgstr ""

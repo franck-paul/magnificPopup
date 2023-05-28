@@ -1,6 +1,6 @@
 <?php
 /**
- * @brief magnific-popup, a plugin for Dotclear 2
+ * @brief magnificPopup, a plugin for Dotclear 2
  *
  * @package Dotclear
  * @subpackage Plugins
@@ -11,10 +11,10 @@
  * @copyright GPL-2.0 https://www.gnu.org/licenses/gpl-2.0.html
  */
 $this->registerModule(
-    'magnific-popup',
+    'magnificPopup',
     'lightBox like effect on images using jquery responsive modal',
     'Franck Paul and contributors',
-    '1.2',
+    '2.0',
     [
         'requires'    => [['core', '2.26']],
         'permissions' => dcCore::app()->auth->makePermissions([
@@ -22,11 +22,11 @@ $this->registerModule(
         ]),
         'type'     => 'plugin',
         'settings' => [
-            'blog' => '#params.magnific-popup',
+            'blog' => '#params.magnificpopup',
         ],
 
-        'details'    => 'https://open-time.net/?q=magnific-popup',
-        'support'    => 'https://github.com/franck-paul/magnific-popup',
-        'repository' => 'https://raw.githubusercontent.com/franck-paul/magnific-popup/master/dcstore.xml',
+        'details'    => 'https://open-time.net/?q=magnificPopup',
+        'support'    => 'https://github.com/franck-paul/magnificPopup',
+        'repository' => 'https://raw.githubusercontent.com/franck-paul/magnificPopup/master/dcstore.xml',
     ]
 );
