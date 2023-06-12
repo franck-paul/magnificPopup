@@ -14,7 +14,7 @@ $this->registerModule(
     'magnificPopup',
     'lightBox like effect on images using jquery responsive modal',
     'Franck Paul and contributors',
-    '2.0',
+    '2.0.1',
     [
         'requires'    => [['core', '2.26']],
         'permissions' => dcCore::app()->auth->makePermissions([
