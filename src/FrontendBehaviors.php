@@ -27,8 +27,8 @@ class FrontendBehaviors
         }
 
         echo
-        dcUtils::cssModuleLoad(My::id() . '/css/magnific-popup.css') .
-        dcUtils::jsModuleLoad(My::id() . '/js/magnific-popup.js') .
+        My::cssLoad('magnific-popup.css') .
+        My::jsLoad('magnific-popup.js') .
         dcUtils::jsJson('magnific_popup', [
             'animate'  => (bool) $settings->animate,
             'escape'   => __('Close (esc)'),
@@ -40,6 +40,6 @@ class FrontendBehaviors
                 ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'avif']
             )),
         ]) .
-        dcUtils::jsModuleLoad(My::id() . '/js/public.js');
+        My::jsLoad('public.js');
     }
 }
