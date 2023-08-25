@@ -49,7 +49,7 @@ class Install extends Process
             }
 
             // Init
-            $settings = dcCore::app()->blog->settings->get(My::id());
+            $settings = My::settings();
             $settings->put('enabled', true, dcNamespace::NS_BOOL, '', false, true);
             $settings->put('animate', false, dcNamespace::NS_BOOL, '', false, true);
         } catch (Exception $e) {

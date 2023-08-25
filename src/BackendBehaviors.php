@@ -14,7 +14,6 @@ declare(strict_types=1);
 
 namespace Dotclear\Plugin\magnificPopup;
 
-use dcCore;
 use dcNamespace;
 use Dotclear\Helper\Html\Form\Checkbox;
 use Dotclear\Helper\Html\Form\Fieldset;
@@ -26,7 +25,7 @@ class BackendBehaviors
 {
     public static function adminBlogPreferencesForm()
     {
-        $settings = dcCore::app()->blog->settings->get(My::id());
+        $settings = My::settings();
 
         echo
         (new Fieldset('magnificpopup'))
@@ -48,7 +47,7 @@ class BackendBehaviors
 
     public static function adminBeforeBlogSettingsUpdate()
     {
-        $settings = dcCore::app()->blog->settings->get(My::id());
+        $settings = My::settings();
         $settings->put('enabled', !empty($_POST['magnific_popup_enabled']), dcNamespace::NS_BOOL);
         $settings->put('animate', !empty($_POST['magnific_popup_animate']), dcNamespace::NS_BOOL);
     }

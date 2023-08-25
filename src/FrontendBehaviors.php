@@ -14,14 +14,13 @@ declare(strict_types=1);
 
 namespace Dotclear\Plugin\magnificPopup;
 
-use dcCore;
 use dcUtils;
 
 class FrontendBehaviors
 {
     public static function publicHeadContent()
     {
-        $settings = dcCore::app()->blog->settings->get(My::id());
+        $settings = My::settings();
         if (!$settings->enabled) {
             return;
         }
