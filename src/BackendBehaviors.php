@@ -23,7 +23,7 @@ use Dotclear\Helper\Html\Form\Para;
 
 class BackendBehaviors
 {
-    public static function adminBlogPreferencesForm()
+    public static function adminBlogPreferencesForm(): string
     {
         $settings = My::settings();
 
@@ -43,12 +43,16 @@ class BackendBehaviors
             ]),
         ])
         ->render();
+
+        return '';
     }
 
-    public static function adminBeforeBlogSettingsUpdate()
+    public static function adminBeforeBlogSettingsUpdate(): string
     {
         $settings = My::settings();
         $settings->put('enabled', !empty($_POST['magnific_popup_enabled']), dcNamespace::NS_BOOL);
         $settings->put('animate', !empty($_POST['magnific_popup_animate']), dcNamespace::NS_BOOL);
+
+        return '';
     }
 }
