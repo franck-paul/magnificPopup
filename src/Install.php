@@ -16,6 +16,7 @@ namespace Dotclear\Plugin\magnificPopup;
 
 use dcCore;
 use dcNamespace;
+use Dotclear\App;
 use Dotclear\Core\Process;
 use Exception;
 
@@ -42,9 +43,9 @@ class Install extends Process
             $old_version = dcCore::app()->getVersion(My::id());
             if (version_compare((string) $old_version, '2.0', '<')) {
                 // Rename settings namespace
-                if (dcCore::app()->blog->settings->exists('magnificpopup')) {
-                    dcCore::app()->blog->settings->delNamespace(My::id());
-                    dcCore::app()->blog->settings->renNamespace('magnificpopup', My::id());
+                if (App::blog()->settings()->exists('magnificpopup')) {
+                    App::blog()->settings()->delNamespace(My::id());
+                    App::blog()->settings()->renNamespace('magnificpopup', My::id());
                 }
             }
 
