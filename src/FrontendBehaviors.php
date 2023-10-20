@@ -14,7 +14,7 @@ declare(strict_types=1);
 
 namespace Dotclear\Plugin\magnificPopup;
 
-use dcUtils;
+use Dotclear\Helper\Html\Html;
 
 class FrontendBehaviors
 {
@@ -28,7 +28,7 @@ class FrontendBehaviors
         echo
         My::cssLoad('magnific-popup.css') .
         My::jsLoad('magnific-popup.js') .
-        dcUtils::jsJson('magnific_popup', [
+        Html::jsJson('magnific_popup', [
             'animate'  => (bool) $settings->animate,
             'escape'   => __('Close (esc)'),
             'previous' => __('Previous (Left arrow key)'),

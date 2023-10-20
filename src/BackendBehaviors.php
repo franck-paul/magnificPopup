@@ -14,7 +14,7 @@ declare(strict_types=1);
 
 namespace Dotclear\Plugin\magnificPopup;
 
-use dcNamespace;
+use Dotclear\App;
 use Dotclear\Helper\Html\Form\Checkbox;
 use Dotclear\Helper\Html\Form\Fieldset;
 use Dotclear\Helper\Html\Form\Label;
@@ -50,8 +50,8 @@ class BackendBehaviors
     public static function adminBeforeBlogSettingsUpdate(): string
     {
         $settings = My::settings();
-        $settings->put('enabled', !empty($_POST['magnific_popup_enabled']), dcNamespace::NS_BOOL);
-        $settings->put('animate', !empty($_POST['magnific_popup_animate']), dcNamespace::NS_BOOL);
+        $settings->put('enabled', !empty($_POST['magnific_popup_enabled']), App::blogWorkspace()::NS_BOOL);
+        $settings->put('animate', !empty($_POST['magnific_popup_animate']), App::blogWorkspace()::NS_BOOL);
 
         return '';
     }
