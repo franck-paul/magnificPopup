@@ -39,20 +39,18 @@ class Install extends Process
             }
 
             $old_version = App::version()->getVersion(My::id());
-            if (version_compare((string) $old_version, '2.0', '<')) {
-                // Rename settings namespace
-                if (App::blog()->settings()->exists('magnificpopup')) {
-                    App::blog()->settings()->delWorkspace(My::id());
-                    App::blog()->settings()->renWorkspace('magnificpopup', My::id());
-                }
+            // Rename settings namespace
+            if (version_compare((string) $old_version, '2.0', '<') && App::blog()->settings()->exists('magnificpopup')) {
+                App::blog()->settings()->delWorkspace(My::id());
+                App::blog()->settings()->renWorkspace('magnificpopup', My::id());
             }
 
             // Init
             $settings = My::settings();
             $settings->put('enabled', true, App::blogWorkspace()::NS_BOOL, '', false, true);
             $settings->put('animate', false, App::blogWorkspace()::NS_BOOL, '', false, true);
-        } catch (Exception $e) {
-            App::error()->add($e->getMessage());
+        } catch (Exception $exception) {
+            App::error()->add($exception->getMessage());
         }
 
         return true;
