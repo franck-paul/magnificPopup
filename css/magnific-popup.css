@@ -308,6 +308,9 @@ img.mfp-img {
   word-wrap: break-word;
   padding-right: 36px;
 }
+.mfp-title a {
+  color: #cddc39;
+}
 .mfp-image-holder .mfp-content {
   max-width: 100%;
 }
