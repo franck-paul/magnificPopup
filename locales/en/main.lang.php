@@ -15,6 +15,7 @@ L10n::$locales['lightBox like effect on images using jquery responsive modal'] =
 L10n::$locales['magnificPopup'] = '';
 L10n::$locales['Enable magnificPopup'] = '';
 L10n::$locales['Enable animation'] = '';
+L10n::$locales['Removal delay (in milliseconds):'] = '';
 L10n::$locales['Close (esc)'] = '';
 L10n::$locales['Previous (Left arrow key)'] = '';
 L10n::$locales['Next (Right arrow key)'] = '';

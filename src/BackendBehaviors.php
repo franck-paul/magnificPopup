@@ -19,6 +19,8 @@ use Dotclear\Helper\Html\Form\Checkbox;
 use Dotclear\Helper\Html\Form\Fieldset;
 use Dotclear\Helper\Html\Form\Label;
 use Dotclear\Helper\Html\Form\Legend;
+use Dotclear\Helper\Html\Form\Note;
+use Dotclear\Helper\Html\Form\Number;
 use Dotclear\Helper\Html\Form\Para;
 
 class BackendBehaviors
@@ -41,6 +43,13 @@ class BackendBehaviors
                     ->value(1)
                     ->label((new Label(__('Enable animation'), Label::INSIDE_TEXT_AFTER))),
             ]),
+            (new Para())->items([
+                (new Number('magnific_popup_delay', 0, 9_999, (int) $settings?->delay))
+                    ->label((new Label(__('Popup removal delay (in milliseconds):'), Label::INSIDE_TEXT_BEFORE))),
+            ]),
+            (new Note())
+                ->class('form-note')
+                ->text(__('Set to 0 or leave empty to use the default value (300 milliseconds)')),
         ])
         ->render();
 
@@ -52,6 +61,7 @@ class BackendBehaviors
         $settings = My::settings();
         $settings->put('enabled', !empty($_POST['magnific_popup_enabled']), App::blogWorkspace()::NS_BOOL);
         $settings->put('animate', !empty($_POST['magnific_popup_animate']), App::blogWorkspace()::NS_BOOL);
+        $settings->put('delay', (int) $_POST['magnific_popup_delay'], App::blogWorkspace()::NS_INT);
 
         return '';
     }

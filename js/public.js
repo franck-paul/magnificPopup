@@ -39,7 +39,7 @@ $(() => {
     },
   };
   if (options.animate) {
-    settings.removalDelay = 300;
+    settings.removalDelay = options.delay || 300;
     settings.mainClass = 'mfp-fade';
   }
   $('div.post-content,div.post-excerpt').magnificPopup(settings);

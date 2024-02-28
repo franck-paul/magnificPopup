@@ -49,6 +49,7 @@ class Install extends Process
             $settings = My::settings();
             $settings->put('enabled', true, App::blogWorkspace()::NS_BOOL, '', false, true);
             $settings->put('animate', false, App::blogWorkspace()::NS_BOOL, '', false, true);
+            $settings->put('delay', 300, App::blogWorkspace()::NS_INT, '', false, true);
         } catch (Exception $exception) {
             App::error()->add($exception->getMessage());
         }
