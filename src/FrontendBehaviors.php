@@ -30,7 +30,7 @@ class FrontendBehaviors
         My::jsLoad('magnific-popup.js') .
         Html::jsJson('magnific_popup', [
             'animate'  => (bool) $settings->animate,
-            'delay'    => (int) $settings?->delay,
+            'delay'    => (int) $settings->delay,
             'escape'   => __('Close (esc)'),
             'previous' => __('Previous (Left arrow key)'),
             'next'     => __('Next (Right arrow key)'),

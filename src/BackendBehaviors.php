@@ -44,7 +44,7 @@ class BackendBehaviors
                     ->label((new Label(__('Enable animation'), Label::INSIDE_TEXT_AFTER))),
             ]),
             (new Para())->items([
-                (new Number('magnific_popup_delay', 0, 9_999, (int) $settings?->delay))
+                (new Number('magnific_popup_delay', 0, 9_999, (int) $settings->delay))
                     ->label((new Label(__('Popup removal delay (in milliseconds):'), Label::INSIDE_TEXT_BEFORE))),
             ]),
             (new Note())
