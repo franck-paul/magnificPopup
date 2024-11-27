@@ -2,7 +2,7 @@
 'use strict';
 
 // Ready, set, go \o/
-$(() => {
+dotclear.ready(() => {
   const options = dotclear.getData('magnific_popup');
 
   const findLegend = (mfp) => {
