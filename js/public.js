@@ -32,7 +32,7 @@ dotclear.ready(() => {
       enabled: true,
       tPrev: options.previous,
       tNext: options.next,
-      tCounter: `<span class="mfp-counter">${options.counter}</span>`,
+      tCounter: options.counter,
     },
     image: {
       titleSrc: findLegend,
