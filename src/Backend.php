@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @brief magnificPopup, a plugin for Dotclear 2
  *
@@ -22,7 +23,8 @@ class Backend extends Process
     public static function init(): bool
     {
         // dead but useful code, in order to have translations
-        __('magnificPopup') . __('lightBox like effect on images using jquery responsive modal');
+        __('magnificPopup');
+        __('lightBox like effect on images using jquery responsive modal');
 
         return self::status(My::checkContext(My::BACKEND));
     }
