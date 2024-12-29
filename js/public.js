@@ -15,7 +15,7 @@ dotclear.ready(() => {
           const figcaption = $(parent).find('figcaption');
           if (figcaption.length) {
             // figcaption found, return it's content
-            return figcaption[0].innerHTML;
+            return figcaption[0].textContent;
           }
         }
       }
