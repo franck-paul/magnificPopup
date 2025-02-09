@@ -42,5 +42,6 @@ dotclear.ready(() => {
     settings.removalDelay = options.delay || 300;
     settings.mainClass = 'mfp-fade';
   }
+
   $('div.post-content,div.post-excerpt').magnificPopup(settings);
 });

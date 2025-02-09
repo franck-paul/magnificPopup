@@ -1,5 +1,5 @@
 /*! Magnific Popup - v1.2.0 - 2024-06-08
- * http://dimsemenov.com/plugins/magnific-popup/
+ * https://dimsemenov.com/plugins/magnific-popup/
  * Copyright (c) 2024 Dmytro Semenov; */
 (() => {
   const factory = ($) => {
