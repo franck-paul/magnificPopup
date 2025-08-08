@@ -15,9 +15,9 @@ $this->registerModule(
     'magnificPopup',
     'lightBox like effect on images using jquery responsive modal',
     'Franck Paul and contributors',
-    '4.8',
+    '4.9',
     [
-        'date'        => '2025-02-09T08:11:51+0100',
+        'date'        => '2025-08-08T10:49:18+0200',
         'requires'    => [['core', '2.28']],
         'permissions' => 'My',
         'type'        => 'plugin',
