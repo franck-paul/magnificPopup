@@ -37,7 +37,7 @@ class FrontendBehaviors
             'next'     => __('Next (Right arrow key)'),
             'counter'  => __('%curr% of %total%'),
             'images'   => implode(',', array_map(
-                static fn ($value): string => 'a[href$=".' . $value . '"],a[href$=".' . strtoupper($value) . '"]',
+                static fn (string $value): string => 'a[href$=".' . $value . '"],a[href$=".' . strtoupper($value) . '"]',
                 ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'avif']
             )),
         ]) .

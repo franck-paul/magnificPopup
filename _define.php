@@ -28,5 +28,6 @@ $this->registerModule(
         'details'    => 'https://open-time.net/?q=magnificPopup',
         'support'    => 'https://github.com/franck-paul/magnificPopup',
         'repository' => 'https://raw.githubusercontent.com/franck-paul/magnificPopup/main/dcstore.xml',
+        'license'    => 'gpl2',
     ]
 );
