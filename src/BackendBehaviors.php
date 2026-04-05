@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @brief magnificPopup, a plugin for Dotclear 2
  *
@@ -29,6 +30,8 @@ class BackendBehaviors
     {
         $settings = My::settings();
 
+        $delay = is_numeric($delay = $settings->delay) ? (int) $delay : 0;
+
         echo
         (new Fieldset('magnificpopup'))
         ->legend((new Legend(__('magnificPopup'))))
@@ -44,7 +47,7 @@ class BackendBehaviors
                     ->label((new Label(__('Enable animation'), Label::INSIDE_TEXT_AFTER))),
             ]),
             (new Para())->items([
-                (new Number('magnific_popup_delay', 0, 9_999, (int) $settings->delay))
+                (new Number('magnific_popup_delay', 0, 9_999, $delay))
                     ->label((new Label(__('Popup removal delay (in milliseconds):'), Label::INSIDE_TEXT_BEFORE))),
             ]),
             (new Note())
@@ -59,9 +62,12 @@ class BackendBehaviors
     public static function adminBeforeBlogSettingsUpdate(): string
     {
         $settings = My::settings();
+
+        $delay = isset($_POST['magnific_popup_delay']) && is_numeric($delay = $_POST['magnific_popup_delay']) ? (int) $delay : 0;
+
         $settings->put('enabled', !empty($_POST['magnific_popup_enabled']), App::blogWorkspace()::NS_BOOL);
         $settings->put('animate', !empty($_POST['magnific_popup_animate']), App::blogWorkspace()::NS_BOOL);
-        $settings->put('delay', (int) $_POST['magnific_popup_delay'], App::blogWorkspace()::NS_INT);
+        $settings->put('delay', $delay, App::blogWorkspace()::NS_INT);
 
         return '';
     }

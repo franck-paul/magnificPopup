@@ -26,12 +26,14 @@ class FrontendBehaviors
             return '';
         }
 
+        $delay = is_numeric($delay = $settings->delay) ? (int) $delay : 0;
+
         echo
         My::cssLoad('magnific-popup.css') .
         My::jsLoad('magnific-popup.js') .
         Html::jsJson('magnific_popup', [
             'animate'  => (bool) $settings->animate,
-            'delay'    => (int) $settings->delay,
+            'delay'    => $delay,
             'escape'   => __('Close (esc)'),
             'previous' => __('Previous (Left arrow key)'),
             'next'     => __('Next (Right arrow key)'),
