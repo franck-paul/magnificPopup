@@ -30,19 +30,19 @@ class BackendBehaviors
     {
         $settings = My::settings();
 
-        $delay = is_numeric($delay = $settings->delay) ? (int) $delay : 0;
+        $delay = $settings->getInt('delay', false);
 
         echo
         (new Fieldset('magnificpopup'))
         ->legend((new Legend(__('magnificPopup'))))
         ->fields([
             (new Para())->items([
-                (new Checkbox('magnific_popup_enabled', (bool) $settings->enabled))
+                (new Checkbox('magnific_popup_enabled', $settings->getBool('enabled', false)))
                     ->value(1)
                     ->label((new Label(__('Enable magnificPopup'), Label::INSIDE_TEXT_AFTER))),
             ]),
             (new Para())->items([
-                (new Checkbox('magnific_popup_animate', (bool) $settings->animate))
+                (new Checkbox('magnific_popup_animate', $settings->getBool('animate', false)))
                     ->value(1)
                     ->label((new Label(__('Enable animation'), Label::INSIDE_TEXT_AFTER))),
             ]),
