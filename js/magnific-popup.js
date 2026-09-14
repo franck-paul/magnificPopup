@@ -753,7 +753,8 @@
         // thx David
         if (mfp.scrollbarSize === undefined) {
           const scrollDiv = document.createElement('div');
-          scrollDiv.style.cssText = 'width: 99px; height: 99px; overflow: scroll; position: absolute; top: -9999px;';
+          scrollDiv.style.cssText =
+            'inlineSize: 99px; blockSize: 99px; overflow: scroll; position: absolute; insetBlockStart: -9999px;';
           document.body.appendChild(scrollDiv);
           mfp.scrollbarSize = scrollDiv.offsetWidth - scrollDiv.clientWidth;
           document.body.removeChild(scrollDiv);
