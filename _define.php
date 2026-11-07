@@ -18,9 +18,9 @@ if (isset($this) && is_object($this) && method_exists($this, 'registerModule') &
         'magnificPopup',
         'lightBox like effect on images using jquery responsive modal',
         'Franck Paul and contributors',
-        '6.0',
+        '6.1',
         [
-            'date'        => '2026-08-03T10:03:43+0200',
+            'date'        => '2026-11-07T16:57:21+0100',
             'requires'    => [['core', '2.39']],
             'permissions' => 'My',
             'type'        => 'plugin',
